@@ -1,0 +1,15 @@
+<div class="book-item">
+  <h3 class="title">{{book?.title}}</h3>
+  <img src="{{book?.previewImgUrl}}" alt="book preview"/>
+  <div class="price">{{book?.price | currency}}</div>
+  <div class="buttons">
+    <button class="edit-button"
+            (click)="editClicked.emit($event)">
+      Edit
+    </button>
+    <button class="delete-button"
+            (click)="onDeleteClicked($event)">
+      Delete
+    </button>
+  </div>
+</div>
